@@ -1,5 +1,5 @@
 #accelerate launch --config_file accelerate_config.yaml 
-pytho3 train_4DD.py \
+python3 train_4DD.py \
   --epochs 10 \
   --batch_size 2 \
   --train_file train.tsv \
