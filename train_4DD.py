@@ -666,7 +666,7 @@ if __name__=='__main__':
 
     args=vars(arg_parser.parse_args())
 
-    ROOT=pathlib.Path('/global/scratch/users/kentkchang/dramatic-bert')
+    ROOT=pathlib.Path('.')
     MODEL_PATH=ROOT / 'model'
     DATA_PATH=ROOT / 'model' / 'data'
     OUTPUT_PATH=MODEL_PATH / args['model_output']
@@ -921,7 +921,7 @@ if __name__=='__main__':
     num_steps=args["epochs"]*len(data_loader)
 
     if use_tqdm:
-        progress_bar=tqdm(num_steps)
+        progress_bar=tqdm(total=num_steps)
 
     main_log('Training starts ...')
     timestamp=datetime.datetime.now().strftime("%m%d%Y-%H%M%S")    
